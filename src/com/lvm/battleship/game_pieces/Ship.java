@@ -48,4 +48,25 @@ public class Ship {
 	public boolean isSunk() {
 		return !(alive);
 	}
+	
+	public int shipLength() {
+		int length;		
+		switch(this.type) {
+		case SUBMARINE:
+			length = 1;
+			break;
+		case DESTROYER:
+			length = 2;
+		case CRUISER:
+			length = 3;
+		case BATTLESHIP:
+			length = 4;
+		case AIRCRAFT_CARRIER:
+			length = 5;
+		default:
+			length = -1;
+		}
+		return length;
+	}
+	
 }
